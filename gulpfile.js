@@ -17,14 +17,9 @@ try{
 	  	.pipe(minify())
 	  	.pipe(gulp.dest('./build'));
 	});
-
-
-	gulp.task('watch', () => {
-	    console.log(3);
+	gulp.task('run', () => {
 	    gulp.watch('./sass/*.sass', gulp.series('sass'));
-	    console.log(2);
 	    gulp.watch('./js/*.js', gulp.series('js'));
-	    console.log('1');
 	});
 
 } catch(e)	{
